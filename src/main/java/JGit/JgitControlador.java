@@ -118,7 +118,7 @@ public class JgitControlador {
                 i++;
                 git = Git.init().setDirectory(new File(localPath)).call();
                 git.remoteAdd().setUri(new URIish(Url)).setName("origen").call();
-            }   git.push().setRemote(Url).setCredentialsProvider(new UsernamePasswordCredentialsProvider(usuario,Contra)).setPushAll().add(".").call();
+            }   git.push().setRemote(Url).setCredentialsProvider(new UsernamePasswordCredentialsProvider("arkanjel","ivo.1997")).setPushAll().add(".").call();
         }catch (GitAPIException|URISyntaxException e){
             System.out.println(e.getMessage());
         }
